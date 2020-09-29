@@ -74,7 +74,7 @@ regPat = re.compile(r'(\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b)(\'])(\s)+((\w)+-(\w)+-
    
 
 
-rawData = open('Phase 1 Stuff/regexToGet-IPAddressToHostnameMapping/raw_ip_address_hostname_mapping')
+rawData = open('Phase 1 Stuff\regexToGet-IPAddressToHostnameMapping\ip_address-to-hostname-mapping.txt')
 # this line of code will create a file object after openning the file
 # raw_ip_address_hostname_mapping and save that file object to the
 # variable "rawData"
@@ -157,7 +157,7 @@ rawData.close()
 
 # this is similar to closing a text editor that openned the file
 
-mapping = open('Phase 1 Stuff/regexToGet-IPAddressToHostnameMapping/mapping.txt', 'a')
+mapping = open('Phase 1 Stuff\regexToGet-IPAddressToHostnameMapping\mapping.txt', 'a')
 # this line of code with open a file called mapping.txt (if that exist), or create a
 # file (if that file does not exist) and name it mapping.txt
 
