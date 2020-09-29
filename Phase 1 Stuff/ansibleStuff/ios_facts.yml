@@ -14,7 +14,4 @@
         
           provider:
             username: tison
-            password: cisco12345
-            host: "{{ inventory_hostname }}"
-
-            
+            passw

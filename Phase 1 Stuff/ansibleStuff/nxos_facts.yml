@@ -1,7 +1,5 @@
 ---
-  - name: Play 1 gather facts from nx-os
-    hosts: nex1
-    connection: local
+  - name: Play 1 gather facts from nx-
     gather_facts: no
 
 

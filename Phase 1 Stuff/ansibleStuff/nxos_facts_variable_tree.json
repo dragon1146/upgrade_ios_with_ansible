@@ -1,6 +1,4 @@
-{
-    "ansible_facts": {
-        "ansible_net_api": "cliconf", 
+: "cliconf", 
         "ansible_net_gather_network_resources": [], 
         "ansible_net_gather_subset": [
             "default"
