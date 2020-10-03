@@ -1,0 +1,10 @@
+---
+
+
+- name: Perform IOS Upgrade
+  hosts: switch
+  connection: local
+  gather_facts: no
+
+  roles:
+    getFacts

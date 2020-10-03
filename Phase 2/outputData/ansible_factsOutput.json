@@ -1,0 +1,200 @@
+"ansible_facts": {
+    "discovered_interpreter_python": "/usr/bin/python",
+    "net_all_ipv4_addresses": [
+        "172.16.20.224"
+    ],
+    "net_all_ipv6_addresses": [],
+    "net_api": "cliconf",
+    "net_filesystems": [
+        "flash:"
+    ],
+    "net_filesystems_info": {
+        "flash:": {
+            "spacefree_kb": 193418.0,
+            "spacetotal_kb": 238976.0
+        }
+    },
+    "net_gather_network_resources": [],
+    "net_gather_subset": [
+        "hardware",
+        "default",
+        "interfaces"
+    ],
+    "net_hostname": "ADM-SANIL-2960L-19",
+    "net_image": "flash:c2960l-universalk9-mz.152-6.E2b/c2960l-universalk9-mz.152-6.E2b.bin",
+    "net_interfaces": {
+        "GigabitEthernet0/1": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7581",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/10": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.758a",
+            "mediatype": "Not Present",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/2": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7582",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/3": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7583",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/4": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7584",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/5": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7585",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/6": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7586",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/7": {
+            "bandwidth": 1000000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7587",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/8": {
+            "bandwidth": 1000000,
+            "description": "Uplink",
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7588",
+            "mediatype": "10/100/1000BaseTX",
+            "mtu": 1500,
+            "operstatus": "up",
+            "type": "Gigabit Ethernet"
+        },
+        "GigabitEthernet0/9": {
+            "bandwidth": 10000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": null,
+            "macaddress": "c4c6.034f.7589",
+            "mediatype": "Not Present",
+            "mtu": 1500,
+            "operstatus": "down",
+            "type": "Gigabit Ethernet"
+        },
+        "Vlan1": {
+            "bandwidth": 1000000,
+            "description": null,
+            "duplex": null,
+            "ipv4": [],
+            "lineprotocol": "down",
+            "macaddress": "c4c6.034f.75c0",
+            "mediatype": null,
+            "mtu": 1500,
+            "operstatus": "administratively down",
+            "type": "EtherSVI"
+        },
+        "Vlan320": {
+            "bandwidth": 1000000,
+            "description": "***Management***",
+            "duplex": null,
+            "ipv4": [
+                {
+                    "address": "172.16.20.224",
+                    "subnet": "24"
+                }
+            ],
+            "lineprotocol": "up",
+            "macaddress": "c4c6.034f.75c1",
+            "mediatype": null,
+            "mtu": 1500,
+            "operstatus": "up",
+            "type": "EtherSVI"
+        }
+    },
+    "net_iostype": "IOS",
+    "net_memfree_mb": 376739.5234375,
+    "net_memtotal_mb": 413207.390625,
+    "net_model": "WS-C2960L-8PS-LL",
+    "net_neighbors": {
+        "GigabitEthernet0/8": [
+            {
+                "host": "ADM-200B-320-11.jaa.aero",
+                "port": "GigabitEthernet1/0/36"
+            }
+        ]
+    },
+    "net_python_version": "2.7.17",
+    "net_serialnum": "FOC2319V0H9",
+    "net_stacked_models": [
+        "WS-C2960L-8PS-LL"
+    ],
+    "net_stacked_serialnums": [
+        "FOC2319V0H9"
+    ],
+    "net_system": "ios",
+    "net_version": "15.2(6)E2b",
+    "network_resources": {}
+}
+}

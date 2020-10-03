@@ -1,0 +1,33 @@
+
+
+
+ADM-SANIL-2960L-19:
+    current info:
+        ios version:    Version 15.2(6r)E
+        file name:      flash:c2960l-universalk9-mz.152-6.E2b/c2960l-universalk9-mz.152-6.E2b.bin
+        ios file size:  2 MB
+        free space:     198MB
+
+    proposed info:
+        ios version:    Version 15.2(7)E
+        file name:      flash:c2960l-universalk9-mz.152-7.E2.bin
+        ios file size:  16 MB
+        free space:     198MB
+
+
+Performing steps to transfer IOS from tftp server to flash: (algorthym)
+    command: copy tftp flash:
+    prompt: Address or name of remote host
+    response: 172.17.10.15
+
+    prompt: Source filename
+    response: c2960l-universalk9-mz.152-7.E2.bin
+
+    prompt: Destination filename:
+    response: [return key/enter]
+
+    after the return key is entered, the file transfer process begins
+
+It took 2 mins to transfer file
+
+

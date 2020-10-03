@@ -1,0 +1,23 @@
+---
+
+
+
+tasks:
+   - name: Check Image Version      
+     ios_facts:
+ 
+   - debug:
+       msg:
+       - "Current version is {{ ansible_net_version }}"
+ 
+   - name: ASSERT THAT THE IOS VERSION IS CORRECT
+    
+    #  vars:
+    #    upgrade_ios_version: 15.2(7)E
+ 
+     assert:
+       that:
+         - upgrade_ios_version == ansible_net_version
+   - debug:
+       msg:
+       - "Software Upgrade has been completed"

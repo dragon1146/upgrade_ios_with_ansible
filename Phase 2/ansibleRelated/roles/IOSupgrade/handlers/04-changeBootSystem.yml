@@ -1,0 +1,8 @@
+---
+
+tasks:
+   - name: Change Boot Variable to new image 
+     ios_config:
+        commands: 
+           - "boot system flash:c2960l-universalk9-mz.152-7.E2.bin"
+        save_when: always

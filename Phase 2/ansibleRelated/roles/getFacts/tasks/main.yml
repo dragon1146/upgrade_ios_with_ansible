@@ -1,0 +1,19 @@
+---
+
+tasks:
+    - name: CHECK CURRENT VERSION
+      ios_facts:
+ 
+    - debug:
+        vars: ansible_facts
+
+
+    #     msg:
+    #     - "Current version is {{ ansible_net_version }}"
+    #     - "Upgrade image is Version 15.2(7)E"
+ 
+    # - debug:
+    #     msg:
+    #     - "Image is not compliant and will be upgraded"
+ 
+    #   when: ansible_net_version != upgrade_ios_version

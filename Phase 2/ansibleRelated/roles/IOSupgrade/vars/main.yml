@@ -1,0 +1,12 @@
+---
+
+
+# upgraded IOS
+upgrade_ios_version: 15.2(7)E
+# net_version: 15.2(6)E2b
+
+
+# credentials for devices
+ansible_network_os: ios
+ansible_user: stison-admin
+ansible_ssh_pass: glitchy2TheM@x
