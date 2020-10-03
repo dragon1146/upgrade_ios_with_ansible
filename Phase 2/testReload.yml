@@ -1,0 +1,32 @@
+---
+
+
+
+- name: Perform IOS Upgrade
+  hosts: ADM-HASSAN-2960L-19
+  serial: 1
+  connection: network_cli
+  gather_facts: no
+
+
+  tasks:
+
+    - name: Reload the Device 
+      cli_command:
+        command: reload
+        prompt:
+          - confirm
+        answer:
+          - 'y'
+
+
+    - name: Wait for device to come back online
+      wait_for:
+        host: "{{ inventory_hostname }}"
+        port: 22
+        delay: 90
+      delegate_to: localhost   
+
+
+
+

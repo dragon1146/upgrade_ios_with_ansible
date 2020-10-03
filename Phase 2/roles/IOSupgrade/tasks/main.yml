@@ -1,0 +1,93 @@
+---
+
+
+- name: CHECK CURRENT VERSION
+  ios_facts:
+ 
+- debug:
+    msg:
+      - "Current version is {{ ansible_net_version }}"
+      - "Upgrade image is Version 15.2(7)E"
+ 
+    # - debug:
+    #     msg:
+    #     - "Image is not compliant and will be upgraded"
+
+- name: Get ansible date/time facts
+  setup:
+   filter: "ansible_date_time"
+   gather_subset: "!all"
+ 
+- name: Store DTG as fact
+  set_fact:
+   DTG: "{{ ansible_date_time.date }}"
+
+   #- name: Backup Start-up Config to Flash Using Raw Module
+  #ios_command:
+  #  commands: copy start-up "flash:startupB4Upgrade{{ DTG }}"
+  #  provider:
+  #    - timeout: 120
+  #raw: copy start-up flash:startupB4Upgrade 
+  #- name: Copy Start-up Config To Flash 
+  #cli_command:
+  #  command:  copy start-up flash:startupB4Upgrade
+  #    prompt:
+  #      - startupB4Upgrade
+  #    answer:
+  #      - 'y' 
+
+- name: Copy Running Config to Start-up Config
+  ios_config:
+    save_when: always  
+    provider:
+      timeout: 120 
+      #       when: net_version != upgrade_ios_version
+- name: Copy IOS to Router 
+  #serial: 1
+  ios_command:
+    commands:
+      - command: 'copy tftp://172.17.10.15/c2960l-universalk9-mz.152-7.E2.bin flash:c2960l-universalk9-mz.152-7.E2.bin'
+        prompt: 'Destination filename'
+        answer: "\r"
+  ignore_errors: yes
+
+
+- name: Change Boot Variable to new image 
+  ios_config:
+    commands: 
+      - "boot system flash:c2960l-universalk9-mz.152-7.E2.bin"
+    save_when: always    
+
+- name: Reload the Device 
+  cli_command:
+    command: reload
+    prompt:
+      - confirm
+    answer:
+      - 'y'
+
+- name: Wait for device to come back online
+  wait_for:
+    host: "{{ inventory_hostname }}"
+    port: 22
+    delay: 90
+  delegate_to: localhost   
+
+
+
+
+        #- name: Wait for device to come back online
+        #wait_for:
+        #host: "{{ inventory_hostname }}"
+        #port: 22
+        #delay: 90
+        #delegate_to: localhost
+
+
+  #- name: Check Image Version      
+  #ios_facts:
+
+  #- debug:
+  #  msg:
+  #  - "Current version is {{ ansible_net_version }}"
+

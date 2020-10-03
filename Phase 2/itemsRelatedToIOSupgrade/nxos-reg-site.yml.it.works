@@ -1,0 +1,27 @@
+---
+
+- name: PLAY 01 Upgrade IOS
+  hosts: core
+#  hosts: jia_c141_620_15
+  connection: network_cli
+  gather_facts: no
+
+#  roles:
+#    - upgrade_ios
+
+  tasks:
+
+    - name: get facts with nxos_facts
+#      nxos_facts:
+#        provider:
+#          host: core
+#          password: glitchy2TheM@x
+#          timeout: 120
+#          transport: cli
+#          username: stison-admin
+      setup:      
+  
+
+    - name: display facts without using roles
+      debug:
+        var: ansible_facts

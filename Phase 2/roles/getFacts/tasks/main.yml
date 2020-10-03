@@ -1,0 +1,19 @@
+---
+
+- name: Get Facts From Device
+  ios_facts:
+
+- name: Display Facts From Device
+  debug:
+    var: ansible_facts
+
+
+    #     msg:
+    #     - "Current version is {{ ansible_net_version }}"
+    #     - "Upgrade image is Version 15.2(7)E"
+ 
+    # - debug:
+    #     msg:
+    #     - "Image is not compliant and will be upgraded"
+ 
+    #   when: ansible_net_version != upgrade_ios_version

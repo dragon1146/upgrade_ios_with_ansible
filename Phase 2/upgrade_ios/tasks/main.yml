@@ -1,0 +1,38 @@
+---
+# tasks file for upgrade_ios
+
+
+#- name: TASK 01 Gather facts from device
+#  setup:
+#    gather_subset: min
+#    provider:
+#      username: stison-admin
+#      password: glitchy2TheM@x
+#      host: "{{ inventory_hostname }}"
+#      timeout: 120
+#      transport: cli
+#  register: result
+
+- name: Task 01 Use ios_facts to get device info
+  ios_facts:
+  ignore_errors: yes
+#  register: result
+
+#- name: TASK 02 Save unfiltered output to file
+#  lineinfile:
+#    line: "{{ ansible_facts }}"
+#    dest: "~/elDocs/upgrade_ios/output/facts.txt"
+#    create: yes
+
+
+#- name: Task 1.5 Display output
+#  debug:
+#    var: ansible_facts
+
+
+- name: Task 02 Save Ip address and hostname of each device to a file
+  lineinfile:
+    line: "{{ ansible_net_all_ipv4_addresses }}    {{ ansible_net_hostname }} \n "
+#    line: "******************************************************************"
+    path: "ip_address-to-hostname-mapping.txt"
+    create: yes

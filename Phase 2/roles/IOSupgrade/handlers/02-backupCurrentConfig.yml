@@ -1,0 +1,34 @@
+---
+
+tasks:
+   - name: Get ansible date/time facts
+     setup:
+       filter: "ansible_date_time"
+       gather_subset: "!all"
+ 
+   - name: Store DTG as fact
+     set_fact:
+       DTG: "{{ ansible_date_time.date }}"
+
+   - name: Backup Start-up Config to Flash
+     ios_command:
+       commands: copy start-up "flash:startupB4Upgrade{{ DTG }}"
+    #  register: config
+
+   - name: Copy Running Config to Start-up Config
+     ios_command:
+       commands: copy run start  
+    #  register: config
+ 
+  #  - name: Save output to ~/network-programmability/backups/
+  #    copy:
+  #      content: "{{config.stdout[0]}}"
+  #      dest:
+
+  
+ 
+#    - name: Create Directory {{hostvars.localhost.DTG}}
+#      file:
+#       path: ~/network-programmability/backups/{{hostvars.localhost.DTG}}
+#       state: directory
+# run_once: true

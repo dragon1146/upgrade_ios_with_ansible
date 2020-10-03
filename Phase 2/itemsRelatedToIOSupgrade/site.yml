@@ -1,0 +1,11 @@
+---
+
+- name: PLAY 01 Upgrade IOS
+#  hosts: core
+#  hosts: jia_c141_620_15
+  hosts: switch
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - upgrade_ios

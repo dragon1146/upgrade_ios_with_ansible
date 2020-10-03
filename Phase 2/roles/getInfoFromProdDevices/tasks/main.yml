@@ -1,0 +1,13 @@
+---
+- name: Task 01 Use ios_facts to get device info
+  ios_facts:
+# ignore_errors: yes
+
+
+
+- name: Task 02 SAVE INFO TO FILE
+  lineinfile:
+    line: "{{ ansible_facts }}"
+          #  line: "{{ ansible_net_all_ipv4_addresses }}    {{ ansible_net_hostname }} \n "
+    path: "deviceInfo.txt"
+    create: yes

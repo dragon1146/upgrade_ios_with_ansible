@@ -1,0 +1,12 @@
+---
+
+
+- name: Perform IOS Upgrade
+  #hosts: ADM-HASSAN-2960L-19
+  hosts: switch
+  serial: 1
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - IOSupgrade

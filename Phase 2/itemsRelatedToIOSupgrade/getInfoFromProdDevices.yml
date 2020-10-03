@@ -1,0 +1,10 @@
+---
+
+- name: PLAY 01 GET INFO FROM PRODUCTION DEVICES
+  hosts: HER-2960X-320-125
+  #  hosts: switch
+  connection: network_cli
+  gather_facts: no
+
+  roles:
+    - getInfoFromProdDevices
